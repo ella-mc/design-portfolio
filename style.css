@@ -302,10 +302,10 @@ p.case-study {
   
   .timeline {
     position: absolute;
-    top: 56px; /* 48px (logo height) + 8px (gap) */
+    top: 73px; /* 48px (logo height) + 8px (gap) */
     left: 24px;
     width: 2px;
-    height: calc(100% - 56px);
+    height: calc(100% - 110px);
     background-color: #e0e0e0;
   }
   
@@ -321,15 +321,15 @@ p.case-study {
   }
   
   .timeline-dot:nth-child(1) {
-    top: 0;
+    top: 0px;
   }
   
   .timeline-dot:nth-child(2) {
-    top: 80px; /* Adjust based on your actual layout */
+    top: 64px; /* Adjust based on your actual layout */
   }
   
   .timeline-dot:nth-child(3) {
-    top: 160px; /* Adjust based on your actual layout */
+    top: 128px; /* Adjust based on your actual layout */
   }
   
   .timeline::before,
