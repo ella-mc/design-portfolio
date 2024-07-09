@@ -13,3 +13,9 @@ window.addEventListener('scroll', () => {
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
+
+
+
+
+  
+  
