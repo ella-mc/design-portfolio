@@ -15,7 +15,20 @@ hamburger.addEventListener('click', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const emailContainer = document.getElementById('emailContainer');
+    const emailAddress = document.getElementById('emailAddress');
 
-
+    emailContainer.addEventListener('click', function() {
+        navigator.clipboard.writeText(emailAddress.textContent).then(() => {
+            emailContainer.classList.add('copied');
+            setTimeout(() => {
+                emailContainer.classList.remove('copied');
+            }, 1500);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    });
+});
   
   
