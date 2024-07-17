@@ -1,0 +1,282 @@
+/* Case Study Specific Styles */
+
+/* highlight */
+
+.highlighted {
+    background-color: #ece05877; /* Yellow highlight color */
+    transition: background-color 0.3s ease;
+}
+
+/* Case-Study-Hero-Section */
+.case-study-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px 20px 0px 20px;
+    text-align: center;
+}
+
+.case-study-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.btn-back, .btn-next {
+    width: auto;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 1024px;
+    margin-top: 24px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px;
+    box-shadow: 0 4px px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+    display: block;
+}
+
+.btn-secondary {
+    margin: 20px auto 40px;
+    display: block;
+}
+
+h2 {
+    margin-bottom: 24px;
+}
+
+/* Case-Study-Info */
+.case-study-info {
+    background-color: #ffffff;
+    padding: 32px 0;
+    max-width: 1100px;
+    margin: -80px auto -80px auto; /* Negative margins to overlap the sections above and below */
+    z-index: 10; /* Ensure it sits on top */
+    position: relative; /* Ensure it can overlap other elements */
+    box-shadow: 0 -11px 20px -10px rgba(0, 0, 0, 0.1);
+    border:  px solid #e5e5e5;
+    border-radius: 4px;
+
+
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure no wrapping */
+    padding: 0 0; /* Padding to prevent touching edges on smaller screens */
+    box-sizing: border-box; 
+}
+
+.info-column {
+    flex: 1;
+    padding: 0 16px;
+    min-width: 0; /* Prevent columns from overflowing */
+}
+
+.info-column h4 {
+    margin-bottom: 8px;
+}
+
+.info-column p {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .info-column {
+        flex: 1 1 50%; /* Ensure two columns per row */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-column {
+        flex: 1 1 100%; /* Ensure one column per row */
+    }
+}
+
+/* key-info-wrapper */ 
+
+.key-info-wrapper { 
+    background-color: #F5F7FA;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 120px 0 40px 0; /* Padding to push content down */
+    position: relative;
+    z-index: 1;
+    margin-top: -40px; /* Negative margin to create overlap with the above section */
+}
+
+    /* Design Brief Section */ 
+
+    .design-brief { 
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .design-brief h4 {
+        font-weight: 400;
+        color: #616161;
+        margin-bottom: 8px;
+    }
+
+    /* Approach Section */ 
+
+    .approach { 
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .approach h4 {
+        font-weight: 400;
+        color: #616161;
+        margin-bottom: 8px;
+    }
+
+    .approach h3 {
+        margin-bottom: 8px;
+    }
+
+    /* Themes */ 
+
+    .themes { 
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .themes h4 {
+        font-weight: 400;
+        color: #616161;
+        margin-bottom: 8px;
+    }
+
+    .themes h3 {
+        margin-bottom: 8px;
+    }
+
+
+
+/* tab section*/ 
+.tab-container {
+    max-width: 1440px;
+    margin: 40px auto;
+    padding: 0px;
+    background-color: #fff;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .tablink {
+    color: #333;
+    padding: 12px 12px;
+    border: none;
+    cursor: pointer;
+    margin: 0 16px;
+    background-color: transparent; /* Explicitly set background to transparent */
+    position: relative; /* Add position relative for positioning the underline */
+    font-weight: 600;
+  }
+  
+  .tablink.active {
+    color: #6A59DF; /* Text color for active tab */
+  }
+  
+  .tablink.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #6A59DF; /* Purple underline */
+  }
+
+/* Sprint Title */ 
+  
+  .sprint-title {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* Key Learnings section */ 
+
+.key-learnings-wrapper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  .key-learnings-wrapper h4 {
+    font-weight: 400;
+    color: #616161;
+    margin-bottom: 8px;
+ }
+
+  .key-learnings-wrapper li {
+    color: #333;
+    margin: 16px
+  }
+ 
+  /* Plan Section */ 
+
+  .process-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0px;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.column.process-image {
+    background-color: #b3b3b3;
+    height: 296px;
+}
+
+
+@media (max-width: 768px) {
+    .process-wrapper {
+        flex-direction: column;
+    }
+
+    .column {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+  
