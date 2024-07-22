@@ -1,20 +1,21 @@
 // script.js
 
-// Function to handle scroll event for approach section
-function handleApproachScroll() {
-    const highlightText = document.querySelector('.highlight-text');
-    if (!highlightText) return; // Exit if element not found (optional)
+function handleHighlightScroll() {
+    const highlightedElements = document.querySelectorAll('.highlighted');
+    if (highlightedElements.length === 0) return; // Exit if no elements found
 
     function updateHighlight() {
-        const elementTop = highlightText.getBoundingClientRect().top;
-        const viewportHeight = window.innerHeight;
+        highlightedElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
 
-        // Calculate the position relative to the viewport
-        if (elementTop < viewportHeight * 0.75) {
-            highlightText.classList.add('highlighted'); // Add highlighted class
-        } else {
-            highlightText.classList.remove('highlighted'); // Remove highlighted class
-        }
+            // Calculate the position relative to the viewport
+            if (elementTop < viewportHeight * 0.75) {
+                element.classList.add('active-highlight'); // Add active-highlight class
+            } else {
+                element.classList.remove('active-highlight'); // Remove active-highlight class
+            }
+        });
     }
 
     // Event listener for scroll events
@@ -24,9 +25,9 @@ function handleApproachScroll() {
     updateHighlight();
 }
 
-// Call the function when the DOM is ready (optional)
+// Call the function when the DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-    handleApproachScroll();
+    handleHighlightScroll();
 });
 
 
@@ -54,3 +55,39 @@ function openTab(tabName) {
     event.currentTarget.className += " active";
   }
   
+
+ // Sticky tabs functionality
+document.addEventListener('DOMContentLoaded', function() {
+    handleApproachScroll();
+
+    const tabsWrapper = document.querySelector('.tabs-wrapper');
+    const tabsOffset = tabsWrapper.offsetTop;
+
+    function handleScroll() {
+        if (window.pageYOffset > tabsOffset) {
+            tabsWrapper.classList.add('sticky');
+        } else {
+            tabsWrapper.classList.remove('sticky');
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+});
+
+// Tab switching function
+function openTab(tabName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.className += " active";
+}
